@@ -52,13 +52,13 @@ window.onload = function() {
         });
     };
 
-    const frame = function() {
+    const tick = function() {
         update();
         draw();
-        requestAnimationFrame(frame);
+        requestAnimationFrame(tick);
     };
 
     createParticles(1000); // pass the number of particles
 
-    frame();
+    tick();
 }
